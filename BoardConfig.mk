@@ -32,6 +32,10 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 BOARD_BOOTIMAGE_PARTITION_SIZE := 100663296
 
+# memorycard fix
+BOARD_SUPPRESS_SECURE_ERASE := true
+TW_USE_FSCRYPT_POLICY := 1
+
 # Creates metadata partition mount point under root for
 # the devices with metadata partition
 BOARD_USES_METADATA_PARTITION := true

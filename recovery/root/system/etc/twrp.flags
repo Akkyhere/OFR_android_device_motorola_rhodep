@@ -1,5 +1,5 @@
-# TWRP Fstab - For Moto G52
-# Thanks @Samw662
+# TWRP Fstab - For Moto G82
+# Thanks @Samw662 
 
 # <mount_point>      <fstype>  <device>        <device2>                  <flags>
 
@@ -32,5 +32,5 @@
 
 # Internal & External Storage
 /data                 f2fs    /dev/block/bootdevice/by-name/userdata                               flags=fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized+wrappedkey_v0;keydirectory=/metadata/vold/metadata_encryption;metadata_encryption=aes-256-xts:wrappedkey_v0
-/external_sd          auto    /dev/block/mmcblk0p1                         /dev/block/mmcblk0p1    flags=display="Micro SD Card";storage;wipeingui;removable
+/external_sd          auto    /dev/block/mmcblk1p1                         /dev/block/mmcblk1      flags=display="Micro SD Card";storage;wipeingui;removable
 /usb-otg              auto    /dev/block/sdg                               /dev/block/sdg1         flags=display="USB OTG";storage;wipeingui;removable

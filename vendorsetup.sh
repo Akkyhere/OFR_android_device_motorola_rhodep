@@ -15,6 +15,8 @@ if [ "$BUILD_OFOX" = "true" ]; then
 
     # A/B
     export FOX_VIRTUAL_AB_DEVICE=1
+    export OF_DEVICE_WITHOUT_RECOVERY_PARTITION=1
+    export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 
     # Binaries
     export FOX_USE_TAR_BINARY=1

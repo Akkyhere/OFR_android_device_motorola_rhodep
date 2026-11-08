@@ -12,6 +12,7 @@ on post-fs
     start boot-hal-1-1
 
 on boot
+    setprop sys.usb.config adb
     start health-hal-2-1
     write /sys/class/leds/vibrator/duration 60
 

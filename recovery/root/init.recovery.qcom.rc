@@ -58,3 +58,6 @@ service vibrator.qti /vendor/bin/hw/vendor.qti.hardware.vibrator.service
 on early-boot
     insmod /vendor/lib/modules/1.1/touchscreen_mmi.ko
     insmod /vendor/lib/modules/1.1/goodix_brl_mmi.ko
+
+on boot
+    setprop sys.usb.config mtp,adb

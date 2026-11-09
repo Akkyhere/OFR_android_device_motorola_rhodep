@@ -54,3 +54,7 @@ service vibrator.qti /vendor/bin/hw/vendor.qti.hardware.vibrator.service
     setenv LD_LIBRARY_PATH /vendor/lib64:/system/lib64
     disabled
     seclabel u:r:recovery:s0
+
+on early-boot
+    insmod /vendor/lib/modules/1.1/touchscreen_mmi.ko
+    insmod /vendor/lib/modules/1.1/goodix_brl_mmi.ko

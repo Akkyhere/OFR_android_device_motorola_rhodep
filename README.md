@@ -21,7 +21,7 @@ Front Camera | 16 MP, f/2.2, (wide), 1.0µm
 ![Device Picture](https://fdn2.gsmarena.com/vv/bigpic/motorola-moto-g82.jpg)
 
 ### Kernel Source
-From Lineage 23.0 Rhodep
+From Lineage 24.0 Rhodep
 
 ### What's working!? :D
 - Touch

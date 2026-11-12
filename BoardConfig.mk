@@ -111,7 +111,7 @@ TW_INCLUDE_LPDUMP := true
 TW_HAS_EDL_MODE := true
 
 # USB & Fastbootd (TW_EXCLUDE_DEFAULT_USB_INIT disabled taaki ADB zinda rahe)
-TW_EXCLUDE_DEFAULT_USB_INIT := false
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Kernel module loading for touch, battery etc
 TW_LOAD_VENDOR_MODULES := $(shell echo \"$(shell ls $(DEVICE_PATH)/recovery/root/vendor/lib/modules/1.1 2>/dev/null)\")

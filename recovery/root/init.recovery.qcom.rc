@@ -56,8 +56,16 @@ service vibrator.qti /vendor/bin/hw/vendor.qti.hardware.vibrator.service
     seclabel u:r:recovery:s0
 
 on early-boot
+    insmod /vendor/lib/modules/1.1/mmi_annotate.ko
+    insmod /vendor/lib/modules/1.1/mmi_info.ko
+    insmod /vendor/lib/modules/1.1/mmi_relay.ko
+    insmod /vendor/lib/modules/1.1/adapter_class.ko
+    insmod /vendor/lib/modules/1.1/tcpc_class.ko
+    insmod /vendor/lib/modules/1.1/tcpc_sgm7220.ko
+    insmod /vendor/lib/modules/1.1/rt_pd_manager.ko
     insmod /vendor/lib/modules/1.1/touchscreen_mmi.ko
     insmod /vendor/lib/modules/1.1/goodix_brl_mmi.ko
 
 on boot
-    setprop sys.usb.config mtp,adb
+    wait /sys/class/udc/4e00000.dwc3 10
+    write /sys/class/udc/4e00000.dwc3/device/../mode peripheral

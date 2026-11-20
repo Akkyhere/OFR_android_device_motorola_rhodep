@@ -19,13 +19,11 @@ on boot
 on property:vendor.sys.listeners.registered=true
     start gatekeeper-1-0-qti
     start keymaster-4-1-qti
-    start vibrator.qti
 
 on property:twrp.all.users.decrypted=true
     stop qseecomd
     stop gatekeeper-1-0-qti
     stop keymaster-4-1-qti
-    stop vibrator.qti
 
 service qseecomd /vendor/bin/qseecomd
     user root
@@ -65,6 +63,7 @@ on early-boot
     insmod /vendor/lib/modules/1.1/rt_pd_manager.ko
     insmod /vendor/lib/modules/1.1/touchscreen_mmi.ko
     insmod /vendor/lib/modules/1.1/goodix_brl_mmi.ko
+    insmod /vendor/lib/modules/1.1/ldo_vibrator_mmi.ko
 
 on boot
     wait /sys/class/udc/4e00000.dwc3 10
